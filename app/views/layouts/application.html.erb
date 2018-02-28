@@ -18,8 +18,9 @@
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <%= nav_link "Home", root_path %>
-          <%= nav_link "Tasks", "/tasks" %>
+          <%= nav_link "Home", root_path %> 
+          <%= nav_link "Tasks", "/tasks" %> 
+          <%= nav_link "About", about_path %> 
         </ul>
       </div> 
     </nav> 
@@ -28,7 +29,9 @@
       <!-- Begin title code -->
       <% if @show_title %>
         <div id="title" class="row">
-          <h1><%= yield(:title) %></h1>
+          <div class="col">
+            <h1><%= yield(:title) %></h1>
+          </div>
         </div>
       <% end %>
       <!-- End title code -->
@@ -36,12 +39,12 @@
       <!-- Begin Notification Section -->
       <div id="flash-messages" class="row">
         <% flash.each do |name, msg| %>
-          <div class="alert alert-<%= name == "notice" ? 'primary' : 'danger'%> alert-dismissable" role="alert">
+          <div class="alert alert-<%= name == "notice" ? 'primary' : 'danger'%> alert-dismissable col" role="alert">
             <%= msg %>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"> 
+              <span aria-hidden="true">&times;</span> 
+            </button> 
+          </div> 
         <% end %>
       </div>
       <!-- End Notification Section -->
@@ -49,9 +52,9 @@
     
     <main role="main" class="container-fluid"> 
       <div class="row">
-        <div class="col-9">
-          <%= yield %>
-        </div>
+        <div class="col-9"> 
+          <%= yield %> 
+        </div> 
         <div class="col">
           <h3>Sidebar</h3>
         </div>
