@@ -6,24 +6,32 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Material font (Roboto) and Material icon -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
     
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <%= link_to 'Todo App', root_path, class: 'navbar-brand' %>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <header class="navbar navbar-dark navbar-fixed-top bg-primary">
+      <button aria-controls="navdrawerDefault" aria-expanded="false" aria-label="Toggle Navigation" class="navbar-toggler" type="button" data-target="#navdrawerDefault" data-toggle="navdrawer">
         <span class="navbar-toggler-icon"></span>
-      </button> 
+      </button>
+    </header>
+    
+    <div aria-hidden="true" class="navdrawer" id="navdrawerDefault" tabindex="-1">
+      <div class="navdrawer-content">
+        <div class="navdrawer-header">
+          <%= link_to 'Todo App', root_path, class: 'navbar-brand px-0' %>
+        </div>
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
+        <nav class="navdrawer-nav">
           <%= nav_link "Home", root_path %> 
           <%= nav_link "Tasks", "/tasks" %> 
           <%= nav_link "About", about_path %> 
-        </ul>
-      </div> 
-    </nav> 
+        </nav> 
+      </div>
+    </div> 
     
     <div class="container-fluid">
       <!-- Begin title code -->
@@ -61,5 +69,10 @@
       </div>
     </main>
     
+    <footer>
+      <div class="container">
+        <span class="text-muted">&copy; 2018 Chris Slade</span>
+      </div>
+    </footer>
   </body>
 </html>
