@@ -20,7 +20,7 @@
 ## Create Model and then Controller/Views
 
 1. You might want to commit your code to git, so you can revert back in you make a mistake.
-2. Create your model: `bin/rails generate model task name due\_date:date\_time priority:integer`. Remember to use the singular version of your name.
+2. Create your model: `bin/rails generate model task name due_date:datetime priority:integer`. Remember to use the singular version of your name.
 3. Go into the rails console, and try creating a model. `bin/rails console`. Some commands `t = Task.new`, `t.name = "Name"`, `t.save`, `t.valid?`, `Task.all`, `Task.first`.
 4. Add validations to your model in app/models/task.rb.
 5. Go into the rails console, and test out your validations.
