@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-
+  resources :tasks
+  
   get 'about' => 'sites#about'
 
   root 'sites#index'
