@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0'
 gem 'material-sass', '~> 4.0.0'
+gem "bootstrap_form", git: "https://github.com/bootstrap-ruby/bootstrap_form.git", branch: "master"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

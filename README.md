@@ -9,6 +9,7 @@
 4. Update your routes file. Remove the routes that were auto-genterated, and add the sites#index as your root. Also create a named route for about.
 5. Create your title helper in `app/helpers/sites_helper.rb`. Test the helper on your index and about views (app/views/sites/...). You may look at my template in `app/view/layouts/application.html`, to figure out how to add your title to the template. However, you cannot copy and paste my code. You MUST type it in yourself.
 5. Follow the [Bootstrap Gem](https://github.com/twbs/bootstrap-rubygem)'s instructions in the readme to add bootstrap to your application. Make sure you read and follow all of the instructions closely.
+   * When it says to add `gem "bootstrap" ...` to your gemfile, that means to add the code to your Gemfile (in the root directory of your application).
    * Remember to run `bundle install` after you add the gem into the `gemfile`. After you need to restart (stop and then start) your server.
    * When you create your template let the Bootstrap examples be your guide. However, Rails will include all Bootstrap CSS and JS. So DO NOT erase your JS or CSS lines that your initial application.html.erb file has. 
    * Also, do not add in any JS or CSS includes (links) from the Bootstrap example, ALL JS and CSS will be included through the asset pipeline, as long as you followed the instructions.
@@ -28,3 +29,7 @@
 7. Create your routes in `config/routes.rb`. (resources :tasks).
 8. Add the index function in your tasks controller. `app/controllers/tasks_controller.rb`
 9. Create a index view file in your `app/views/tasks` folder.
+10. Create a new function in your tasks controller.
+11. Create a new view for your form.
+12. You can install the [bootstrap_form](https://github.com/bootstrap-ruby/bootstrap_form) gem to reduce the amount you need to type for your form. Remember to run bundle install, and restart your server.
+13. Write your create method, along with the private `task_params` method in your tasks\_controller
