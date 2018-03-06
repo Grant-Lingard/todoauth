@@ -1,0 +1,7 @@
+<%= bootstrap_form_with(model: @task, local: true) do |f| %>
+    <%= f.alert_message "Please fix the errors below.", error_summary: false %>
+    <%= f.text_field :name, placeholder: 'Name' %>
+    <%= f.text_field :due_date, id: 'dueDateField', placeholder: "Pick a due date" %>
+    <%= f.number_field :priority, placeholder: '1' %>
+    <%= f.submit @task.persisted? ? "Update Task" : "Create Task" %>
+<% end %>

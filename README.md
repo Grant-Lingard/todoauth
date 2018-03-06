@@ -32,4 +32,8 @@
 10. Create a new function in your tasks controller.
 11. Create a new view for your form.
 12. You can install the [bootstrap_form](https://github.com/bootstrap-ruby/bootstrap_form) gem to reduce the amount you need to type for your form. Remember to run bundle install, and restart your server.
-13. Write your create method, along with the private `task_params` method in your tasks\_controller
+13. Write your create method, along with the private `task_params` method in your tasks\_controller.
+14. Create your show method with the show view. Create a partial for your task and use it in the index view as well.
+15. Create your edit method with the view. Create a partial for your form, and use it on your new page as well.
+16. Create your update method.
+17. Create your destroy method.

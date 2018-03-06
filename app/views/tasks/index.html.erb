@@ -1,11 +1,5 @@
 <% title 'Tasks' %> 
 
-<% @tasks.each do |task| %>
-    <div class="task">
-        Name: <%= task.name %><br>
-        Due Date: <%= task.due_date %><br>
-        Priority: <%= task.priority %>
-    </div> 
-<% end %>
+<%= render @tasks %>
 
 <%= link_to "Create Task", new_task_path %>
