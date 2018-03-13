@@ -39,7 +39,6 @@
 17. Create your destroy method.
 
 ## Associated Model
-
 1. Create your associated model. `bin/rails g model note title body:text task_id:integer`, and migrate your database.
 2. Add validations into your new model. Add `has_many ...` and `belongs_to ....` into your models. Test it out on the console.
 3. Create your controller for your new model: `bin/rails g controller notes`.
