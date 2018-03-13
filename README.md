@@ -37,3 +37,10 @@
 15. Create your edit method with the view. Create a partial for your form, and use it on your new page as well.
 16. Create your update method.
 17. Create your destroy method.
+
+## Associated Model
+
+1. Create your associated model. `bin/rails g model note title body:text task_id:integer`, and migrate your database.
+2. Add validations into your new model. Add `has_many ...` and `belongs_to ....` into your models. Test it out on the console.
+3. Create your controller for your new model: `bin/rails g controller notes`.
+4. Update your `config/routes.rb` file to include nested routes for your new model.

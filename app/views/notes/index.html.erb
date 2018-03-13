@@ -1,0 +1,10 @@
+<% title "All Notes" %>
+
+<% @notes.each do |note| %>
+    <div class="note">
+        Title: <%= note.title %>
+        <p>
+            <%= note.body %>
+        </p>
+    </div>
+<% end %>
