@@ -43,7 +43,6 @@
 2. Add validations into your new model. Add `has_many ...` and `belongs_to ....` into your models. Test it out on the console.
 3. Create your controller for your new model: `bin/rails g controller notes`.
 4. Update your `config/routes.rb` file to include nested routes for your new model.
-5. Generate your notes controller: `bin/rails g controller notes`.
 6. Create your index method, with your index view. You also might think about creating a partial for your note.
 7. Create your new method with a view (form to create a new note).
 8. Create your create method.
