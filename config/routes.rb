@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :tasks do
     resources :notes
-  end
+  end    
   
   get 'about' => 'sites#about'
 

@@ -1,0 +1,8 @@
+<div class="note">
+    Title: <%= link_to note.title, task_note_path(@task,note) %>
+    <p>
+        <%= note.body %> 
+    </p>
+    <%= link_to "Edit", edit_task_note_path(@task,note), class: "btn btn-primary" %>  
+    <%= link_to "Delete", task_note_path(@task,note), method: :delete, data:{confirm: "Are you sure?" }, class: "btn btn-danger"   %>
+</div>

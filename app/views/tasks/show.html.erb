@@ -6,3 +6,7 @@
 <%= link_to "Delete", task_path(@task), method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure?" } %>
 <hr>
 <%= link_to "All Tasks", tasks_path %>
+
+<div id="notes">
+    <%= render @task.notes %>
+</div>

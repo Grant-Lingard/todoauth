@@ -1,0 +1,6 @@
+<%= bootstrap_form_with(model: [@task,@note], local: true) do |f|    %>
+    <%= f.alert_message "Please fix the errors below.", error_summary: false %>
+    <%= f.text_field :title, placeholder: 'title' %>  
+    <%= f.text_area :body, placeholder: 'Enter Note here', label: "Note" %>  
+    <%= f.submit @note.persisted? ? "Update Note" : "Create Note" %>
+<% end %>    
