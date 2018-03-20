@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   resources :tasks do
     resources :notes
-  end    
+  end
+  
+  resources :users
   
   get 'about' => 'sites#about'
+  get 'signup' => 'users#new'
 
   root 'sites#index'
   

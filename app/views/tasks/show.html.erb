@@ -1,12 +1,16 @@
 <% title @task.name %>
 
+<%= link_to "All Tasks", tasks_path %>
+
+
 <%= render @task %>
 
 <%= link_to "Edit", edit_task_path(@task), class: "btn btn-primary" %>
 <%= link_to "Delete", task_path(@task), method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure?" } %>
 <hr>
-<%= link_to "All Tasks", tasks_path %>
+
 
 <div id="notes">
+    <h2>Notes</h2>
     <%= render @task.notes %>
 </div>

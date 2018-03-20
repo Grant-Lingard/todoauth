@@ -51,3 +51,10 @@
 11. Create your destroy method.
 12. Make sure you add some links so you can get back to the task, or all notes, etc.
 13. Don't forget to add some new components from [bootstrap](https://getbootstrap.com).
+
+## User Authentication
+1. Uncomment the bcrypt gem in the `gemfile`, and run bundle to install it. Don't forget to restart your server.
+2. Create your user model: `bin/rails g model user name email password_digest`.
+3. Add validations to your model and add `has_secure_password`.
+4. Create your users controller: `bin/rails g controller users`.
+5. Add in your new method in your users controller. Add a new view, and edit your routes file. We will still use restful routes for uses, but we will also use a named route to make our sign up url look nice.

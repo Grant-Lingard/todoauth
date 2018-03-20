@@ -2,5 +2,5 @@
     Name: <%= link_to_unless_current task.name, task %><br>
     Due Date: <%= task.due_date %><br>
     Priority: <%= task.priority %><br>
-    <%= link_to "Task Notes", task_notes_path(task) %>
+    <%= link_to "Task's Notes", task_notes_path(task) %>
 </div>
