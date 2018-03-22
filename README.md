@@ -58,3 +58,8 @@
 3. Add validations to your model and add `has_secure_password`.
 4. Create your users controller: `bin/rails g controller users`.
 5. Add in your new method in your users controller. Add a new view, and edit your routes file. We will still use restful routes for uses, but we will also use a named route to make our sign up url look nice.
+6. Add the create method in your users controller.
+7. Create your sessions controller: `bin/rails g controller sessions`. Add your routes for the sessions (resources and named routes).
+8. Create your new method and the login form.
+9. Create your create method in the sessions controller.
+10. Add your current\_user method to the `app/controllers/application_controller`.

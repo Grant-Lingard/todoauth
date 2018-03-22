@@ -4,9 +4,12 @@ Rails.application.routes.draw do
   end
   
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   
   get 'about' => 'sites#about'
-  get 'signup' => 'users#new'
+  get 'register' => 'users#new'
+  get 'login' => 'sessions#new'
+  get 'logout' => 'sessions#destroy'
 
   root 'sites#index'
   
