@@ -63,3 +63,18 @@
 8. Create your new method and the login form.
 9. Create your create method in the sessions controller.
 10. Add your current\_user method to the `app/controllers/application_controller`.
+11. Update your navigation bar, to switch the links if there is a current user logged in. So that a logout link shows up. You also might want to remove the link to tasks for users that are not logged in.
+11. Add your login and logout and authorize methods to you application\_controller. (Don't copy and paste).
+12. Update your sessions controller to use the login method, and also add a destroy method to logout. Also make your sessions controller redirect to the protected page.
+13. Update your users controller to login users that are just created, so they don't have to login after creating an account.
+14. Now associate your model with your users. (You can create a new model if you wish, I am using the task model).
+    1. Add the foriegn key: `bin/rails g migration add_user_id_to_tasks user_id:integer`.
+    2. Add the has\_many and belongs\_to into your models.
+    3. Update the create in your tasks controller to associate the new task with the current\_user.
+    4. Make sure you look up all tasks through the current\_user (`current_user.tasks.find`) instead of with the model directly (`Task.find`).
+    5. You also will want to protect your associated model (notes) from getting accessed from users not logged in, and to look up the task through the current\_user. (I didn't do this in class but it is done in in the code.)
+15. Finish your user model.
+    1. Add and edit and update. If you notice, the update method uses a method defined in my user model.
+    2. Add the update\_with\_password method to your user model and the attr\_accessor :current\_password. (Don't copy and paste.)
+    3. I decided that any account changes should require a password. the udpdate\_with\_password method verifies the old password before changing and saving the user.
+    4. You will need to add a show and destroy to your user model. This is not done in the example.

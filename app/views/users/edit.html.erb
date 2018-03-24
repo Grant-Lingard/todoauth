@@ -1,0 +1,11 @@
+<% title "Edit Account" %>
+
+<%= bootstrap_form_with(model: @user, local: true) do |f| %>
+    <%= f.alert_message "Please fix the errors below.", error_summary: false %>
+    <%= f.text_field :name %>
+    <%= f.text_field :email %>
+    <%= f.password_field :current_password, label: "Current Password", help: "Required for any account changes." %>
+    <%= f.password_field :password, label: "New Password", help: "leave blank to keep current password" %>
+    <%= f.password_field :password_confirmation %>
+    <%= f.primary "Sign Up" %>
+<% end %>  

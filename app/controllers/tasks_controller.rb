@@ -1,8 +1,9 @@
 class TasksController < ApplicationController
+    before_action :authorize
     before_action :load_task, except: [:index, :new, :create]
     
     def index
-        @tasks = Task.all
+        @tasks = current_user.tasks.all
     end
 
     def new
@@ -11,6 +12,7 @@ class TasksController < ApplicationController
     
     def create
         @task = Task.new task_params
+        @task.user = current_user
         if @task.save
             redirect_to @task, notice: "Task Created."
         else
@@ -40,7 +42,7 @@ class TasksController < ApplicationController
     private
     
     def load_task
-        @task = Task.find params[:id] 
+        @task = current_user.tasks.find params[:id] 
     end
     
     def task_params
