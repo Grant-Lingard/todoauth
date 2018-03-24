@@ -57,7 +57,7 @@
 2. Create your user model: `bin/rails g model user name email password_digest`.
 3. Add validations to your model and add `has_secure_password`.
 4. Create your users controller: `bin/rails g controller users`.
-5. Add in your new method in your users controller. Add a new view, and edit your routes file. We will still use restful routes for uses, but we will also use a named route to make our sign up url look nice.
+5. Add in your new method in your users controller. Add a new view, and edit your routes file. We will still use restful routes for users, but we will also use a named route to make our sign up url look nice.
 6. Add the create method in your users controller.
 7. Create your sessions controller: `bin/rails g controller sessions`. Add your routes for the sessions (resources and named routes).
 8. Create your new method and the login form.
@@ -74,7 +74,7 @@
     4. Make sure you look up all tasks through the current\_user (`current_user.tasks.find`) instead of with the model directly (`Task.find`).
     5. You also will want to protect your associated model (notes) from getting accessed from users not logged in, and to look up the task through the current\_user. (I didn't do this in class but it is done in in the code.)
 15. Finish your user model.
-    1. Add and edit and update. If you notice, the update method uses a method defined in my user model.
+    1. Add edit and update (with an edit view). If you notice, the update method uses a method defined in my user model.
     2. Add the update\_with\_password method to your user model and the attr\_accessor :current\_password. (Don't copy and paste.)
     3. I decided that any account changes should require a password. the udpdate\_with\_password method verifies the old password before changing and saving the user.
     4. You will need to add a show and destroy to your user model. This is not done in the example.
