@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'register' => 'users#new'
   get 'login' => 'sessions#new'
   get 'logout' => 'sessions#destroy'
+  get 'auth/:provider/callback' => "authentications#create"
 
   root 'sites#index'
   
