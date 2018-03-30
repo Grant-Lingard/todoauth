@@ -78,3 +78,12 @@
     2. Add the update\_with\_password method to your user model and the attr\_accessor :current\_password. (Don't copy and paste.)
     3. I decided that any account changes should require a password. the udpdate\_with\_password method verifies the old password before changing and saving the user.
     4. You will need to add a show and destroy to your user model. This is not done in the example.
+
+## Login with a Service
+
+1. Create an application on Github or Facebook or another site.
+2. Add the appriopriate omniauth gem to your gemfile. Run bundle.
+3. Create your initializer file: `config/initializers/omniath.rb`. Remember to restart your server anytime you change this file.
+4. Add the client id and secret to your .bash\_profile file. See `config/example_profile` for an example. Just add the lines into your bash profile. DO NOT ADD THE SECRET INTO your git repository.
+   1. Your bash profile is located in the home directory. It is a hidden file. Make sure you are in class to see where it is.
+5. Create an authentications controller. Add the callback route in your routes file.
