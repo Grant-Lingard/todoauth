@@ -1,0 +1,7 @@
+#Copy and paste this into your .bash_profile file. The file is located in your home directory. In your shell do "cd" to get to your home directory.
+#If you do an ls, you won't see the .bash_profile. If you do an ls -a you will see it. You will have to edit it using a terminal editor. vi or emacs or nano.
+#Nano is the fastest one to learn how to use.
+
+
+export GITHUB_KEY=5555555
+export GITHUB_SECRET=555555
