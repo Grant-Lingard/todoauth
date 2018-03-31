@@ -2,7 +2,12 @@ class UsersController < ApplicationController
     before_action :authorize, except: [:new, :create]
     
     def new
-        @user = User.new
+        if session[:user_hash]
+            @user = User.create_from_hash(session[:user_hash].symbolize_keys)
+            @user.valid?
+        else
+            @user = User.new
+        end
     end
     
     def create

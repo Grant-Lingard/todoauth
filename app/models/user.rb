@@ -15,6 +15,16 @@ class User < ApplicationRecord
            self.errors.add(:current_password, "is incorrect.")
            false
        end   
-    end  
+    end
+    
+    def self.create_from_hash(user_hash)
+       user = User.new
+       user.name = user_hash[:name]
+       user.email = user_hash[:email]
+       user.uid = user_hash[:uid]
+       user.token = user_hash[:token]
+       user.password_digest = 0
+       user
+    end
     
 end

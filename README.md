@@ -87,3 +87,7 @@
 4. Add the client id and secret to your .bash\_profile file. See `config/example_profile` for an example. Just add the lines into your bash profile. DO NOT ADD THE SECRET INTO your git repository.
    1. Your bash profile is located in the home directory. It is a hidden file. Make sure you are in class to see where it is.
 5. Create an authentications controller. Add the callback route in your routes file.
+6. Add the omni\_hash method and the render json into your create method in your authentications\_controller. Test your project here. DO NOT CONTINUE until you see the hash.
+7. Add the user\_hash method and also create a create\_from\_hash method in your user model.
+8. Now test your code to make user you correctly created your user hash.
+9. Now finish your create method for your authentications controller.
