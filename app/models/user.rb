@@ -27,7 +27,7 @@ class User < ApplicationRecord
        user
     end
     
-    def has_password
+    def has_password?
        self.password_digest.nil? || self.password_digest != "0"
     end
     

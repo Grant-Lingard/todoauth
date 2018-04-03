@@ -4,7 +4,7 @@
     <%= f.alert_message "Please fix the errors below.", error_summary: false %>
     <%= f.text_field :name %>
     <%= f.text_field :email %>
-    <% if @user.has_password %>
+    <% if @user.has_password? %>
         <%= f.password_field :password %>
         <%= f.password_field :password_confirmation %>
     <% end %>

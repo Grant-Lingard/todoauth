@@ -90,4 +90,13 @@
 6. Add the omni\_hash method and the render json into your create method in your authentications\_controller. Test your project here. DO NOT CONTINUE until you see the hash.
 7. Add the user\_hash method and also create a create\_from\_hash method in your user model.
 8. Now test your code to make user you correctly created your user hash.
-9. Now finish your create method for your authentications controller.
+9. Now add the code into your create method that tries to create a user.
+10. Update your users controller to check for saved github data and add it to the user. You will want to update the form to not have the password fields when creating through github. I added a simple has\_password? method to the user. You can use this in your edit too.
+11. Make sure users can create through github.
+12. Finish your authentications controller to login users that have a uid from github, and create new users if you can't find a user with the uid in your database.
+13. Update your login page (sessions#new) to not error if a user tries to login with a password after they signed up through github.
+14. Add a link on your sign up and login pages to go to "Sign Up throug github". Note: you probably didn't setup your application to use content\_for, link my uses. So don't include that.
+15. ON YOUR OWN. Update your user controller (edit and update) to be able to edit users without passwords. 
+    1. You will want to add some logic into your update form so that it doesn't have password fields.
+    2. You will want to update the update method so that it doesn't check for a correct password from users that signed up with github.
+    3. You may find the has\_password? method I added to the user model helpful.
