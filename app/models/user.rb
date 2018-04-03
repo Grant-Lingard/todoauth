@@ -23,8 +23,12 @@ class User < ApplicationRecord
        user.email = user_hash[:email]
        user.uid = user_hash[:uid]
        user.token = user_hash[:token]
-       user.password_digest = 0
+       user.password_digest = "0"
        user
+    end
+    
+    def has_password
+       self.password_digest.nil? || self.password_digest != "0"
     end
     
 end

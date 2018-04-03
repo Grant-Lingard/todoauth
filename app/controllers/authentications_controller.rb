@@ -2,15 +2,22 @@ class AuthenticationsController < ApplicationController
     
     def create
         #render json: omni_hash.to_json
-        #return
+        #return #uncomment to debug
         #render json: user_hash.to_json
-        user = User.create_from_hash(user_hash)
-        if user.save
-           login(user)
-           redirect_to root_path, notice: "You successfully signed up."
+        #return
+        user = User.where(uid: user_hash[:uid]).first
+        if user
+            login(user)
+            redirect_to root_path, notice: "You are logged in."
         else
-            session[:user_hash] = user_hash
-            redirect_to register_path, notice: "Please fill in the missing information."
+            user = User.create_from_hash(user_hash)
+            if user.save
+               login(user)
+               redirect_to root_path, notice: "You successfully signed up."
+            else
+                session[:user_hash] = user_hash
+                redirect_to register_path, notice: "Please fill in the missing information."
+            end
         end
     end
     

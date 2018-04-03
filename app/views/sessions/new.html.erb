@@ -5,3 +5,7 @@
     <%= f.password_field :password %>
     <%= f.primary "Login" %>
 <% end %>
+
+<% content_for(:sidebar) do %>
+    <%= link_to "Sign Up with Github", "/auth/github" %>
+<% end %>
