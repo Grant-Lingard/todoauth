@@ -47,6 +47,9 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  #Added for testing
+  gem 'guard-minitest'
+  gem 'guard-spring'
 end
 
 group :development do
@@ -60,3 +63,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#Added for tessting
+group :test do
+  gem 'capybara_minitest_spec'
+  gem 'shoulda'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'mocha'
+end

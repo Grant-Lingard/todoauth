@@ -100,3 +100,12 @@
     1. You will want to add some logic into your update form so that it doesn't have password fields.
     2. You will want to update the update method so that it doesn't check for a correct password from users that signed up with github.
     3. You may find the has\_password? method I added to the user model helpful.
+
+## Testing
+
+1.  Add the testing gems in the Gemfile and run `bundle`. (There 2 areas where I added the gems).
+2.  Run `gaurd init` to get the Gaurdfile created.
+3.  Edit `Guardfile` (in the same folder as the Gemfile), and remove the spring in it.
+4.  Edit your `test/test_helper.rb` file to require the files and to not use fixtures.
+5.  Run `bin/rails g integration_test sites` to create an integration test to test your sites\_controller.
+6.  Add your tests in `test/integration/site\_test.rb`. 
