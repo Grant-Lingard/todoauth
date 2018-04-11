@@ -108,6 +108,7 @@
 3.  Edit `Guardfile` (in the same folder as the Gemfile), and remove (comment out) the spring section. Also add spring: true to the minitest section. Also, comment out the lines under Rails 4 to get tests to autorun when saving files.
 4.  Edit your `test/test_helper.rb` file to require the gems we use, and to not use fixtures. Comment out the AuthenticationMacros part (line 30 and 31) until you create it later.
 5.  Run `bin/rails g integration_test sites` to create an integration test to test your sites\_controller (welcome controller).
+6.  Run `guard` to run your tests. Press enter while guard is running to re-run your tests. Type `exit` and press enter to quit guard.
 6.  Add your tests in `test/integration/site\_test.rb`. 
 7.  Now test one of your controllers and models. I tested reminders. You should probably test a model/controller you already created. (Like Tasks)
 8.  Create your factories file in `test/factories`. You will need to have a user factory, and a reminder factory. Notice that the reminder is associated with a user.
