@@ -103,9 +103,18 @@
 
 ## Testing
 
-1.  Add the testing gems in the Gemfile and run `bundle`. (There 2 areas where I added the gems).
+1.  Add the testing gems in the Gemfile and run `bundle`. (There 2 areas where I added the gems). I added version numbers on some of the gems since class!
 2.  Run `gaurd init` to get the Gaurdfile created.
-3.  Edit `Guardfile` (in the same folder as the Gemfile), and remove the spring in it.
-4.  Edit your `test/test_helper.rb` file to require the files and to not use fixtures.
-5.  Run `bin/rails g integration_test sites` to create an integration test to test your sites\_controller.
+3.  Edit `Guardfile` (in the same folder as the Gemfile), and remove (comment out) the spring section. Also add spring: true to the minitest section. Also, comment out the lines under Rails 4 to get tests to autorun when saving files.
+4.  Edit your `test/test_helper.rb` file to require the gems we use, and to not use fixtures. Comment out the AuthenticationMacros part (line 30 and 31) until you create it later.
+5.  Run `bin/rails g integration_test sites` to create an integration test to test your sites\_controller (welcome controller).
 6.  Add your tests in `test/integration/site\_test.rb`. 
+7.  Now test one of your controllers and models. I tested reminders. You should probably test a model/controller you already created. (Like Tasks)
+8.  Create your factories file in `test/factories`. You will need to have a user factory, and a reminder factory. Notice that the reminder is associated with a user.
+9.  To be able to test logged in users, create a `test/support` folder, and add a `authentication_macros.rb` file. Uncomment the lines 29-30 in the test\_helper.rb to include it. Notice it uses the user factory, and login_user returns the created user.
+10.  Edit your `/test/models/reminder_test.rb` file to make sure it validates the right fields, has the right relationships.
+11.  Write a test to make sure only logged in users can visit the reminders page. (Example included)
+12.  Write a test to make sure the new/create/show pages work. (Example included)
+13.  Write a test to make sure deleting reminders work. (Example included)
+14.  Write a test to make sure your index page works. (Example NOT included)
+15.  Write a test to make sure your edit/update/show pages work. (Example NOT included)

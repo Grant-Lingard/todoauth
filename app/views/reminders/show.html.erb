@@ -1,0 +1,7 @@
+<% title @reminder.name %>
+
+<%= render @reminder %>
+
+<%= link_to "Edit", edit_reminder_path(@reminder), class: "btn btn-primary" %>
+<br>
+<%= link_to "Delete", reminder_path(@reminder), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>

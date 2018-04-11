@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     resources :notes
   end
   
+  resources :reminders
+  
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   

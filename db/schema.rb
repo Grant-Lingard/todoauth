@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180331012415) do
+ActiveRecord::Schema.define(version: 20180410011726) do
 
   create_table "notes", force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.integer "task_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reminders", force: :cascade do |t|
+    t.string "name"
+    t.integer "priority"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
