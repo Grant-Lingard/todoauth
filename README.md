@@ -116,6 +116,9 @@
 10.  Edit your `/test/models/reminder_test.rb` file to make sure it validates the right fields, has the right relationships.
 11.  Write a test to make sure only logged in users can visit the reminders page. (Example included)
 12.  Write a test to make sure the new/create/show pages work. (Example included)
+     1. Sometimes Capybara cannot find your fields. This is caused by a bug with the bootstrap_form gem. If you look at the HTML, you will notice the input tags have no id. This is actually invalid HTML.
+     2. This causes screen readers to not connect the label ("Name" and "Priority") with the input field, so Capybara cannot find the imput field.
+     2. To fix it, you will need to add the ID manually. Look in `app/views/reminders/new.html.erb`. I added an option to add the id on the html fields. The id should be `model_fieldname`.
 13.  Write a test to make sure deleting reminders work. (Example included)
 14.  Write a test to make sure your index page works. (Example NOT included)
 15.  Write a test to make sure your edit/update/show pages work. (Example NOT included)

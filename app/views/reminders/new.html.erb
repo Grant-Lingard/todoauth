@@ -3,6 +3,6 @@
 <%= bootstrap_form_with(model: @reminder, local: true) do |f| %>
     <%= f.alert_message "Please fix the errors below.", error_summary: true %>
     <%= f.text_field :name, id: 'reminder_name' %>
-    <%= f.number_field :priority, id: 'priority' %>
+    <%= f.number_field :priority, id: 'reminder_priority' %>
     <%= f.primary "Create Reminder" %>
 <% end %>
