@@ -1,12 +1,6 @@
 require 'test_helper'
 
 class ReminderTest < ActiveSupport::TestCase
-  test "has valid factory" do
-    reminder = FactoryBot.build :reminder
-    
-    assert reminder.valid?
-  end
-  
   test "presence of required fields" do
     reminder = Reminder.new
     assert validate_presence_of(:name), reminder
