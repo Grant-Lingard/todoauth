@@ -12,7 +12,7 @@ class RemindersTest < ActionDispatch::IntegrationTest
   end
   
   #TODO Write an index page test.
-  #Create at least 2 reminders using Factory Girl
+  #Create at least 2 reminders using Factory Bot
   #Visit the index page
   #assert that the 2 reminder names are on the page.
   
